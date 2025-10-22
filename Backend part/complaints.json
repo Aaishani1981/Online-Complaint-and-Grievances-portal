@@ -1,0 +1,76 @@
+[
+  {
+    "id": "a50240af-66f4-4833-9fac-c46ed3ea91ed",
+    "email": "aaishanimukhi@gmail.com",
+    "category": "public",
+    "description": "fan not working",
+    "pdfFile": "1758985820477-AKTU_UHVPE.pdf",
+    "status": "Submitted"
+  },
+  {
+    "id": "e66e57a9-8608-47ab-a479-19ada42421b9",
+    "email": "aaishanimukhi@gmail.com",
+    "category": "public",
+    "description": "fan not working",
+    "pdfFile": "1758985907006-Admit Card.pdf",
+    "status": "Submitted"
+  },
+  {
+    "id": "84507013-a07f-46ea-97f8-47465ed263f0",
+    "email": "aaishanimukhi@gmail.com",
+    "category": "public",
+    "description": "fan not working",
+    "pdfFile": "1759148573012-AKTU_UHVPE.pdf",
+    "status": "Submitted"
+  },
+  {
+    "id": "7021775d-e786-48ce-a0a6-e04c4fc1dd89",
+    "email": "aaishanimukhi@gmail.com",
+    "category": "public",
+    "description": "fan not working",
+    "pdfFile": "1759404876837-Aaishani Resume.pdf",
+    "status": "Submitted"
+  },
+  {
+    "id": "e4351c01-b306-4e96-b8ff-6ba4896e5425",
+    "email": "aaishanimukhi@gmail.com",
+    "category": "public ",
+    "description": "gng5n g54m ",
+    "pdfFile": null,
+    "status": "escalated",
+    "escalations": [
+      {
+        "escalationId": "5e61c66f-9a6e-446c-9855-786e680694b8",
+        "escalatedTo": "Senior Management",
+        "reason": "feg2nwgjkwg wbqeb",
+        "escalatedBy": "admin",
+        "escalatedAt": "2025-10-11T10:30:37.537Z",
+        "notifyParties": true,
+        "status": "escalated"
+      },
+      {
+        "escalationId": "f6bf1aff-c6ae-4352-902a-39f6757f1baa",
+        "escalatedTo": "Senior Management",
+        "reason": "wifi not working",
+        "escalatedBy": "admin",
+        "escalatedAt": "2025-10-11T10:32:54.779Z",
+        "notifyParties": true,
+        "status": "escalated"
+      }
+    ],
+    "escalatedTo": "Senior Management",
+    "lastUpdated": "2025-10-11T10:32:54.779Z",
+    "publicReplies": [
+      {
+        "reply": "Your complaint has been escalated to Senior Management for further review and resolution.",
+        "timestamp": "2025-10-11T10:30:37.537Z",
+        "addedBy": "system"
+      },
+      {
+        "reply": "Your complaint has been escalated to Senior Management for further review and resolution.",
+        "timestamp": "2025-10-11T10:32:54.779Z",
+        "addedBy": "system"
+      }
+    ]
+  }
+]
