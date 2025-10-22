@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Header -->
+    <header class="admin-header">
+      <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+      <h1>Dashboard</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <!-- Overview Section -->
+      <section class="overview-section">
+        <h2>Overview</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Open Complaints</div>
+            <div class="stat-value" id="openCount">23</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Resolved Complaints</div>
+            <div class="stat-value" id="resolvedCount">157</div>
+          </div>
+          <div class="stat-card wide">
+            <div class="stat-label">Average Resolution Time</div>
+            <div class="stat-value" id="avgTime">3 days</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Complaints Section -->
+      <section class="recent-section">
+        <h2>Recent Complaints</h2>
+        <div class="complaints-list" id="recentComplaints">
+          <div class="complaint-item">
+            <div class="complaint-info">
+              <strong>Complaint ID: 20240715-001</strong>
+              <div class="complaint-issue">Issue: Delayed Response</div>
+            </div>
+            <span class="status-badge open">Open</span>
+          </div>
+          <div class="complaint-item">
+            <div class="complaint-info">
+              <strong>Complaint ID: 20240714-002</strong>
+              <div class="complaint-issue">Issue: Incorrect Information</div>
+            </div>
+            <span class="status-badge resolved">Resolved</span>
+          </div>
+          <div class="complaint-item">
+            <div class="complaint-info">
+              <strong>Complaint ID: 20240713-003</strong>
+              <div class="complaint-issue">Issue: Service Disruption</div>
+            </div>
+            <span class="status-badge in-progress">In Progress</span>
+          </div>
+        </div>
+        <button class="view-all-btn" onclick="viewAllComplaints()">View All Complaints</button>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="admin-nav">
+      <div class="nav-item active">
+        <div class="nav-icon">🏠</div>
+        <span>Dashboard</span>
+      </div>
+      <div class="nav-item" onclick="showComplaintsManagement()">
+        <div class="nav-icon">📝</div>
+        <span>Complaints</span>
+      </div>
+      <div class="nav-item" onclick="showUsersManagement()">
+        <div class="nav-icon">👥</div>
+        <span>Users</span>
+      </div>
+      <div class="nav-item" onclick="showSettings()">
+        <div class="nav-icon">⚙️</div>
+        <span>Settings</span>
+      </div>
+    </nav>
+
+    <!-- Complaint Management Modal -->
+    <div id="complaintModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Manage Complaint</h3>
+          <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Complaint ID:</label>
+            <input type="text" id="modalComplaintId" readonly>
+          </div>
+          <div class="form-group">
+            <label>Status:</label>
+            <select id="modalStatus">
+              <option value="pending">Pending</option>
+              <option value="under-review">Under Review</option>
+              <option value="in-progress">In Progress</option>
+              <option value="resolved">Resolved</option>
+              <option value="closed">Closed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Assign to Staff:</label>
+            <select id="modalStaff">
+              <option value="">Select Staff Member</option>
+              <option value="john.doe">John Doe</option>
+              <option value="jane.smith">Jane Smith</option>
+              <option value="mike.johnson">Mike Johnson</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Internal Notes (Staff Only):</label>
+            <textarea id="modalInternalNotes" placeholder="Add private notes for staff..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Public Reply (Sent to User):</label>
+            <textarea id="modalPublicReply" placeholder="Add public reply to inform user..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button onclick="saveComplaintChanges()" class="save-btn">Save Changes</button>
+          <button onclick="escalateCurrentComplaint()" class="escalate-btn">Escalate</button>
+          <button onclick="closeModal()" class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin-script.js"></script>
+</body>
+</html>

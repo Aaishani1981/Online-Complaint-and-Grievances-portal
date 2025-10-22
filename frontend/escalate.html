@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Escalate Complaint</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="escalation-container">
+    <!-- Header -->
+    <header class="escalation-header">
+      <button class="back-btn" onclick="window.history.back()">←</button>
+      <h2>Escalate Complaint</h2>
+    </header>
+
+    <!-- Complaint Details Section -->
+    <section class="complaint-details-section">
+      <h3>Complaint Details</h3>
+      <div class="complaint-summary">
+        <div class="complaint-icon">📋</div>
+        <div class="complaint-info">
+          <h4 id="complaintTitle">Unresolved Issue with Service Provider</h4>
+          <p class="complaint-id">Complaint ID: <span id="complaintId">20240726-001</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Escalation Options Section -->
+    <section class="escalation-options-section">
+      <h3>Escalation Options</h3>
+      
+      <div class="form-group">
+        <label for="higherAuthority">Select Higher Authority</label>
+        <select id="higherAuthority" required>
+          <option value="">Select Higher Authority</option>
+          <option value="Senior Management">Senior Management</option>
+          <option value="Department Head">Department Head</option>
+          <option value="Regional Manager">Regional Manager</option>
+          <option value="Executive Committee">Executive Committee</option>
+          <option value="External Ombudsman">External Ombudsman</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="escalationReason">Escalation Reason</label>
+        <textarea id="escalationReason" placeholder="Provide reason for escalation..." rows="4" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="notifyParties" checked>
+          <label for="notifyParties" class="checkbox-label">
+            <strong>Notify All Parties</strong>
+            <br>
+            <span class="checkbox-description">Notify all parties involved in the original complaint</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Action Button -->
+    <div class="escalation-actions">
+      <button id="escalateBtn" onclick="escalateComplaint()" class="escalate-btn">
+        Escalate Complaint
+      </button>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="escalationResult" class="escalation-result" style="display: none;"></div>
+  </div>
+
+  <script src="escalation-script.js"></script>
+</body>
+</html>

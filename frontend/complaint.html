@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Complaint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Submit Complaint</h2>
+    <form id="complaintForm" enctype="multipart/form-data">
+      <input id="email" name="email" type="email" placeholder="Your Email" required />
+      <input id="category" name="category" type="text" placeholder="Category" required />
+      <textarea id="description" name="description" placeholder="Complaint Description" rows="4"></textarea>
+      <input type="file" id="pdf" name="pdf" accept="application/pdf" />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    
+    <!-- Bottom navigation -->
+    <div class="bottom-nav" style="position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid #e5e7eb; display: grid; grid-template-columns: repeat(4, 1fr); padding: 0.5rem 0;">
+      <div class="nav-item" onclick="window.location.href='index.html'">
+        <div class="nav-icon">🏠</div>
+        <span>Dashboard</span>
+      </div>
+      <div class="nav-item active">
+        <div class="nav-icon">📝</div>
+        <span>Submit Complaint</span>
+      </div>
+      <div class="nav-item" onclick="window.location.href='status.html'">
+        <div class="nav-icon">📂</div>
+        <span>My Complaints</span>
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon">👤</div>
+        <span>Profile</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
